@@ -27,5 +27,13 @@
   "dependencies": {
     "html-webpack-partials-plugin": "^0.8.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Austinb96/TO-DO_List.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Austinb96/TO-DO_List/issues"
+  },
+  "homepage": "https://github.com/Austinb96/TO-DO_List#readme",
   "description": ""
 }
