@@ -21,11 +21,25 @@ module.exports = {
         new HtmlWebpackPartialsPlugin({
             path: path.join(__dirname, "../src/views/partials/navigation.html"),
             location: "navigation",
+            priority: "replace",
+            template_filename: "*",
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, "../src/views/partials/svg.html"),
+            location: "CustomSVG",
+            priority: "replace",
             template_filename: "*",
         })
     ],
     module: {
         rules: [
+            {
+                test:/\.js$/,
+                exclude:/node_modules/,
+                use:{
+                    loader: "babel-loader",
+                }
+            },
             {
                 test:/\.html$/,
                 use:[

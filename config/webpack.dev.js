@@ -1,7 +1,7 @@
 const path = require("path")
 const config = require("./webpack.config.js");
 const {merge} = require("webpack-merge");
-
+const ExtraWatchWebpackPlugin = require('extra-watch-webpack-plugin');
 
 module.exports = merge(config,{
     mode:"development",
@@ -23,6 +23,11 @@ module.exports = merge(config,{
             },
         ]
     },
+    plugins: [
+        new ExtraWatchWebpackPlugin({
+            dirs: [ path.join(__dirname, 'src/views/partials')],
+        }),
+    ],
     devServer:{
         open: true,
         host: "127.0.0.1",
@@ -38,3 +43,4 @@ module.exports = merge(config,{
         },
     },
 });
+

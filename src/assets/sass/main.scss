@@ -1,7 +1,12 @@
 ﻿@use 'base';
 @use 'layout';
+@use 'components';
 
 body {
     margin: 0;
     background: #444;
+}
+
+.debug  > * {
+    border: 1px solid red;
 }
